@@ -4,6 +4,7 @@ const user=require("./Routes/Users");
 console.log(db);
 db.connect();
 const app=express();
+app.get('/')
 app.use(express.json());
 app.use("/",user.route);
 app.listen(8080,()=>{
